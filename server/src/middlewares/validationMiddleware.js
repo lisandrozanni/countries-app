@@ -1,4 +1,4 @@
-function validateQueryLength(req, res, next) {
+function validateQuery(req, res, next) {
   const query = req.query.q;
 
   if (typeof query !== 'string') {
@@ -18,5 +18,5 @@ function validateQueryLength(req, res, next) {
 };
 
 module.exports = {
-  validateQueryLength
+  validateQuery
 };

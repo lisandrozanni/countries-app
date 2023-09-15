@@ -3,6 +3,6 @@ const router = express.Router();
 const countriesController = require('../controllers/countriesController');
 const validationMiddleware = require('../middlewares/validationMiddleware');
 
-router.get('/countries', validationMiddleware.validateQueryLength, countriesController.searchCountries);
+router.get('/countries', validationMiddleware.validateQuery, countriesController.searchCountries);
 
 module.exports = router;
