@@ -7,11 +7,11 @@ Se realizó el frontend con React y NextJS, donde se agregaron estilos con Mater
 1. En el server correr el siguiente comando. Escucha en el puerto 3001.
 
    ```bash
-   npm run dev
+   npm i && npm run dev
 1. Luego para el client es el mismo comando. Escucha en el puerto 3000.
 
    ```bash
-   npm run dev
+   npm i -f && npm run dev
 ## Testear app
 En el server, correr el siguiente comando.
    ```bash
