@@ -13,9 +13,9 @@ export function CountriesTable({ countries }) {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className='MuiTableCell-head'>Nombre</TableCell>
-            <TableCell className='MuiTableCell-head'>Población</TableCell>
-            <TableCell className='MuiTableCell-head'>Porcentaje</TableCell>
+            <TableCell>Nombre</TableCell>
+            <TableCell>Población</TableCell>
+            <TableCell>Porcentaje</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
