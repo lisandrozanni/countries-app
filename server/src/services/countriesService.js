@@ -16,7 +16,7 @@ async function fetchCountries(query) {
   return countries.map(country => ({
     name: country.name,
     population: country.population,
-    percentage: ((country.population / totalPopulation) * 100).toFixed(2) + '%'
+    percentage: ((country.population / totalPopulation) * 100).toFixed(2) + ' %'
   }));
 }
 
