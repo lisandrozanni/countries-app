@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { TextField, Button } from '@material-ui/core';
 
-export default function SearchCountries({ onSearch }) {
+import styles from './styles.module.css';
+
+export function SearchBar({ onSearch }) {
   const [query, setQuery] = useState('');
   
   const handleButtonClick = () => {
@@ -9,17 +11,17 @@ export default function SearchCountries({ onSearch }) {
   }
 
   return (
-    <div className="container">
-      <div className="search-elements">
+    <div className={styles.container}>
+      <div className={styles.searchBar}>
         <TextField
-          label="Search country"
-          variant="outlined"
+          label='Buscar país'
+          variant='outlined'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          style={{flexGrow: 1}}
+          style={{ flexGrow: 1 }}
         />
-        <Button variant="contained" color="primary" onClick={handleButtonClick}>
-          Search
+        <Button variant='contained' color='primary' onClick={handleButtonClick}>
+          Buscar
         </Button>
       </div>
     </div>

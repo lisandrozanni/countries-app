@@ -1,0 +1,12 @@
+.container {
+  max-width: 450px;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #ffebee !important;
+}
+
+.text {
+  color: #c62828;
+}

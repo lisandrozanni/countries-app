@@ -1,26 +1,28 @@
-import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import numberFormatter from '@/utils/numberFormatter';
 
-function CountriesTable({ countries }) {
+import styles from './styles.module.css';
+
+export function CountriesTable({ countries }) {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className="MuiTableCell-head">Name</TableCell>
-            <TableCell className="MuiTableCell-head">Population</TableCell>
-            <TableCell className="MuiTableCell-head">Percentage</TableCell>
+            <TableCell className='MuiTableCell-head'>Nombre</TableCell>
+            <TableCell className='MuiTableCell-head'>Población</TableCell>
+            <TableCell className='MuiTableCell-head'>Porcentaje</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {countries.length > 0 && countries.map((country, index) => (
+          {countries.map((country, index) => (
             <TableRow key={index}>
               <TableCell>{country.name}</TableCell>
-              <TableCell>{country.population}</TableCell>
+              <TableCell>{numberFormatter(country.population)}</TableCell>
               <TableCell>{country.percentage}</TableCell>
             </TableRow>
           ))}
@@ -29,5 +31,3 @@ function CountriesTable({ countries }) {
     </div>
   );
 }
-
-export default CountriesTable;
