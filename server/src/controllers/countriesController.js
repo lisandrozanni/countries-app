@@ -6,7 +6,7 @@ async function searchCountries(req, res) {
   const countriesData = await countriesService.fetchCountries(query);
   
   if (countriesData.length === 0) {
-    return res.status(404).json({ message: 'No results found.' });
+    return res.status(204).send();
   }
 
   res.json(countriesData);

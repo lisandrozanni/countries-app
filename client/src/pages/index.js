@@ -25,9 +25,8 @@ export default function Home() {
   }
 
   let message;
-  if (statusCode === 204) message = <Message text={'Debe contener 3 o más caracteres'} />
-  if (statusCode === 400) message = <Message text={'Contiene caracteres inválidos'} />
-  if (statusCode === 404) message = <Message text={'No se encontraron resultados'} />
+  if (statusCode === 400) message = <Message text={'Debe contener 3 o más caracteres'} />
+  if (statusCode === 204) message = <Message text={'No se encontraron resultados'} />
 
   return (
     <>
