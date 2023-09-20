@@ -29,8 +29,8 @@ describe('Countries service', () => {
     const result = await fetchCountries('Ind');
 
     expect(result).toEqual([
-      { name: 'India', population: 1000, percentage: '66.67%' },
-      { name: 'Indonesia', population: 500, percentage: '33.33%' }
+      { name: 'India', population: 1000, percentage: '66.67 %' },
+      { name: 'Indonesia', population: 500, percentage: '33.33 %' }
     ]);
 
     expect(Country.findAll).toHaveBeenCalledWith({
